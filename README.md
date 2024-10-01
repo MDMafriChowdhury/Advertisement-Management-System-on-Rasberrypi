@@ -27,9 +27,11 @@ Add the line below at the end of the file:
 python3 /path/to/your/script/Advertisement.py
 ```
 
-## 2. Installing and Configuring `rclone` for Google Drive
 
-### 2.1 Install `rclone`
+
+### 2. Installing and Configuring `rclone` for Google Drive
+
+## 2.1 Install `rclone`
 Run the following commands to install `rclone`:
 
 ```bash
@@ -37,7 +39,7 @@ sudo apt update
 sudo apt install rclone
 ```
 
-### 2.2 Configure `rclone`
+## 2.2 Configure `rclone`
 After installing `rclone`, configure it to access your Google Drive:
 
 1. Run the configuration command:
@@ -56,7 +58,7 @@ After installing `rclone`, configure it to access your Google Drive:
     rclone lsd GoogleDrive:
     ```
 
-### 2.3 Syncing Google Drive with the Raspberry Pi
+## 2.3 Syncing Google Drive with the Raspberry Pi
 You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi/Desktop/AddCasting/videos`) using the following command:
 
 ```bash
