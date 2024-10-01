@@ -60,7 +60,7 @@ After installing `rclone`, configure it to access your Google Drive:
 You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi/Desktop/AddCasting/videos`) using the following command:
 
 ```bash
-rclone sync GoogleDrive: /FolderLocation --drive-root-folder-id "GoogleDriveFolderID"
+rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-id "GoogleDriveFolderID"
 ```
 
 ### 3. Automating Google Drive Sync with `crontab`
@@ -73,7 +73,7 @@ To automatically sync the videos every 30 minutes, add a cron job using `crontab
 
 2. Add the following line to the crontab file:
     ```bash
-    */30 * * * * /usr/bin/rclone sync "GoogleDrive:" "/FolderLocation" --drive-root-folder-id "GoogleDriveFolderID" >/dev/null 2>&1
+    */30 * * * * /usr/bin/rclone sync "GoogleDrive:" "/home/pi/Desktop/AddCasting/videos" --drive-root-folder-id "GoogleDriveFolderID" >/dev/null 2>&1
     ```
 
 This setup will sync the videos from Google Drive to the local folder every 30 minutes.
