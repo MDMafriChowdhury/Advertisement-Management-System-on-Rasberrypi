@@ -63,7 +63,33 @@ You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi
 rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-id "GoogleDriveFolderID"
 ```
 
-### 3. Automating Google Drive Sync with `crontab`
+### 3. # Autostart LXTerminal on Raspberry Pi
+
+This guide explains how to set **LXTerminal** to open automatically at boot.
+
+## Steps to Create the Autostart Entry
+
+1. **Open the Terminal**.
+
+2. **Navigate to the Autostart Directory**:
+   ```bash
+   cd ~/.config/autostart/
+   ```
+
+3. **Create a New Desktop Entry**:
+    ```bash
+    nano lxterminal.desktop
+    ```
+
+4. **Add the Following Content**:
+    ```bash
+    [Desktop Entry]
+    Name=Terminal
+    Exec=lxterminal
+    Type=Application
+    ```
+
+### 4. Automating Google Drive Sync with `crontab`
 To automatically sync the videos every 30 minutes, add a cron job using `crontab`:
 
 1. Open the `crontab` editor:
