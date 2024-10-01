@@ -33,6 +33,7 @@ Run the following commands to install `rclone`:
 ```bash
 sudo apt update
 sudo apt install rclone
+```
 
 ### 2.2 Configure `rclone`
 After installing `rclone`, configure it to access your Google Drive:
@@ -58,3 +59,4 @@ You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi
 
 ```bash
 rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-id "1dzuIjwWJ1yTG3dZO2K6nNbvJTjg5DKlC"
+```
