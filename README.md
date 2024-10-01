@@ -3,7 +3,7 @@
 This project implements an advertisement management system on a Raspberry Pi. The system runs a Python script that automatically starts on boot, fetches video data from a server, retrieves videos from a database, and syncs them from Google Drive using `rclone`.
 
 ## Features
-- **Automatic Startup**: The Python script runs automatically when the Raspberry Pi boots.
+- **Automatic Startup**: The terminal opens automatically with the Python script on Raspberry Pi boot.
 - **Data Fetching**: The system fetches data from a server to control the playback of advertisement videos.
 - **Video Retrieval**: Videos are retrieved from a database.
 - **Google Drive Syncing**: Videos are synced with a Google Drive folder using `rclone`.
