@@ -63,7 +63,7 @@ You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi
 rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-id "GoogleDriveFolderID"
 ```
 
-### 3. # Autostart LXTerminal on Raspberry Pi
+### 3. Autostart LXTerminal on Raspberry Pi
 
 This guide explains how to set **LXTerminal** to open automatically at boot.
 
