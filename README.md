@@ -62,3 +62,18 @@ You can manually sync the Google Drive folder to a local folder (e.g., `/home/pi
 ```bash
 rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-id "1dzuIjwWJ1yTG3dZO2K6nNbvJTjg5DKlC"
 ```
+
+### 3. Automating Google Drive Sync with `crontab`
+To automatically sync the videos every 30 minutes, add a cron job using `crontab`:
+
+1. Open the `crontab` editor:
+    ```bash
+    crontab -e
+    ```
+
+2. Add the following line to the crontab file:
+    ```bash
+    */30 * * * * /usr/bin/rclone sync "GoogleDrive:" "/home/pi/Desktop/AddCasting/videos" --drive-root-folder-id "1dzuIjwWJ1yTG3dZO2K6nNbvJTjg5DKlC" >/dev/null 2>&1
+    ```
+
+This setup will sync the videos from Google Drive to the local folder every 30 minutes.
