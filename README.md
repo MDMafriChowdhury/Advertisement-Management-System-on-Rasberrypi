@@ -24,7 +24,7 @@ nano ~/.bashrc
 
 Add the line below at the end of the file:
 ```bash
-python3 /path/to/your/script.py
+python3 /path/to/your/script/Advertisement.py
 ```
 
 ## 2. Installing and Configuring `rclone` for Google Drive
