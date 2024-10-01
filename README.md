@@ -20,10 +20,12 @@ To ensure the Python script runs automatically when the Raspberry Pi boots, add 
 
 ```bash
 nano ~/.bashrc
+```
 
 Add the line below at the end of the file:
 ```bash
 python3 /path/to/your/script.py
+```
 
 ## 2. Installing and Configuring `rclone` for Google Drive
 
