@@ -64,7 +64,6 @@ rclone sync GoogleDrive: /home/pi/Desktop/AddCasting/videos --drive-root-folder-
 ```
 
 ### 3. Autostart LXTerminal on Raspberry Pi
-
 This guide explains how to set **LXTerminal** to open automatically at boot.
 
 ## Steps to Create the Autostart Entry
