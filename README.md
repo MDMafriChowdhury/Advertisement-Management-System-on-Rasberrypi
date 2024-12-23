@@ -99,6 +99,47 @@ To automatically sync the videos every 30 minutes, add a cron job using `crontab
     ```
 
 
-# Advertisement Management System on Server Deployment
+# Flask-Based Remote Raspberry Pi Management System
 
-This project implements an advertisement management system on a RServer. 
+This project is a Flask web application for remotely managing a Raspberry Pi. The application provides functionalities such as rebooting the Raspberry Pi, connecting via VNC, closing terminal sessions, and redirecting users to specific URLs.
+
+## Features
+
+- **Reboot Remote Raspberry Pi:** Reboots a Raspberry Pi device remotely using SSH.
+- **Connect via VNC Viewer:** Establishes a VNC connection to the Raspberry Pi.
+- **Close Terminal Session:** Closes active terminal sessions on the Raspberry Pi.
+- **Redirect to URL:** Redirects users to a specific Google Spreadsheet URL.
+- **Status Check:** Checks the connection status to the Raspberry Pi.
+
+## Technologies Used
+
+- **Flask:** Web framework for building the application.
+- **Paramiko:** Python library for SSH connections.
+- **PyAutoGUI:** Automation of keyboard and mouse operations.
+- **Subprocess:** Launching external applications (e.g., RealVNC Viewer).
+- **Flask-CORS:** Enabling Cross-Origin Resource Sharing.
+
+## Prerequisites
+
+1. Python 3.x installed on your machine.
+2. Required Python libraries:
+   - Flask
+   - Flask-CORS
+   - Paramiko
+   - PyAutoGUI
+3. RealVNC Viewer installed on your system.
+4. Raspberry Pi set up with SSH enabled.
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+   
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
