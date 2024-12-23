@@ -142,4 +142,11 @@ This project is a Flask web application for remotely managing a Raspberry Pi. Th
    ```bash
    pip install -r requirements.txt
    ```
+3. Update the Raspberry Pi credentials and IP address in the script:
+      ```bash
+   hostname = "192.168.2.194"  # Update with your Raspberry Pi IP
+   username = "pi"             # Update with your Raspberry Pi username
+   password = "pi"             # Update with your Raspberry Pi password
+   ```
+   
    
