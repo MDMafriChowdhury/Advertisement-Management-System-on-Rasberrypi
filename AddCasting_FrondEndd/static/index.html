@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Management</h1>
+        <button class="btn" onclick="scheduleTask('Machine 1')">Schedule Task for Machine 1</button>
+
+        <button class="btn" onclick="restartMachine('Machine 1')">Restart Machine 1</button>
+        <button class="btn" onclick="closeTerminal('Machine 1')">Close Terminal of Machine 1</button>
+        <button class="btn" onclick="viewMachineStatus()">View Machine Status</button>
+    </div>
+
+    <script>
+      function executeScript(action, machine) {
+            // Send AJAX request to backend server
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/execute_script', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (action === 'schedule') {
+                        window.open(response.redirect_url, '_blank');
+                    } else {
+                        alert(response.output);
+                    }
+                }
+            };
+            var data = JSON.stringify({ action: action, machine: machine });
+            xhr.send(data);
+        }
+        function scheduleTask(machine) {
+            executeScript('schedule', machine);
+        }
+
+        function restartMachine(machine) {
+            executeScript('restart', machine);
+        }
+
+        function viewMachineStatus() {
+            executeScript('status', '');
+        }
+        function closeTerminal(machine) {
+            executeScript('close_terminal', machine);
+        }
+    </script>
+</body>
+</html>
