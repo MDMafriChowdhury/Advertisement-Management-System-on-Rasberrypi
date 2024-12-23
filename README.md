@@ -98,9 +98,7 @@ To automatically sync the videos every 30 minutes, add a cron job using `crontab
     crontab -e
     ```
 
-2. Add the following line to the crontab file:
-    ```bash
-    */30 * * * * /usr/bin/rclone sync "GoogleDrive:" "/home/pi/Desktop/AddCasting/videos" --drive-root-folder-id "GoogleDriveFolderID" >/dev/null 2>&1
-    ```
 
-This setup will sync the videos from Google Drive to the local folder every 30 minutes.
+# Advertisement Management System on Server Deployment
+
+This project implements an advertisement management system on a RServer. 
